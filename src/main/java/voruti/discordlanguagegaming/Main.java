@@ -24,8 +24,8 @@ public class Main {
                     .build();
 
             jda.awaitReady();
-        } catch (LoginException e) {
-            LOGGER.error("LoginException occurred", e);
+        } catch (LoginException | IllegalArgumentException e) {
+            LOGGER.error("Exception occurred", e);
         }
     }
 }
