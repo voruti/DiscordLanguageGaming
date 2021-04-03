@@ -4,8 +4,6 @@ services:
   discordlanguagegaming:
     container_name: discordlanguagegaming
     build: .
-    environment:
-      TOKEN: "yourBotToken"
     restart: unless-stopped
 
     # use custom logger:
