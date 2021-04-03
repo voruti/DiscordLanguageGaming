@@ -25,7 +25,7 @@ public class Main {
 
             jda.awaitReady();
         } catch (LoginException e) {
-            LOGGER.error("", e);
+            LOGGER.error("LoginException occurred", e);
         }
     }
 }
