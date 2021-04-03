@@ -14,16 +14,18 @@ public class DiscordListenerAdapter extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
-        LOGGER.info("Generous message: {}", event.getMessage());
+        if (!event.getAuthor().isBot()) {
+            LOGGER.info("Generous message: {}", event.getMessage());
 
-        Message msg = event.getMessage();
-        if (msg.getContentRaw().equals("!ping")) {
+            Message msg = event.getMessage();
+            msg.delete().queue();
+
             MessageChannel channel = event.getChannel();
-            long time = System.currentTimeMillis();
-            channel.sendMessage("Pong!") /* => RestAction<Message> */
-                    .queue(response /* => Message */ -> {
-                        response.editMessageFormat("Pong: %d ms", System.currentTimeMillis() - time).queue();
-                    });
+            channel.sendMessage(msg).queue();
+
+            if (msg.getContentRaw().contains("!was")) {
+                channel.sendMessage("Man wei\u00DF halt einfach nicht, von wem die Nachricht kommt.").queue();
+            }
         }
     }
 }
