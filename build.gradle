@@ -1,10 +1,16 @@
 plugins {
     id 'java'
-    id 'application'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
-mainClassName = "voruti.discordlanguagegaming.Main"
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'voruti.discordlanguagegaming.Main',
+                'Multi-Release': true
+        )
+    }
+}
 
 group 'voruti'
 version '1.0-SNAPSHOT'
