@@ -8,6 +8,7 @@ services:
       TOKEN: "yourBotToken"
     restart: unless-stopped
 
+    # use custom logger:
     logging:
       driver: syslog
       options:
