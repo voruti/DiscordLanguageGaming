@@ -1,0 +1,15 @@
+version: "3"
+services:
+
+  discordlanguagegaming:
+    container_name: discordlanguagegaming
+    build: .
+    environment:
+      TOKEN: "yourBotToken"
+    restart: unless-stopped
+
+    logging:
+      driver: syslog
+      options:
+        syslog-address: "tcp://127.0.0.1"
+        tag: "discordlanguagegaming"
