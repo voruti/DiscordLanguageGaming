@@ -4,6 +4,7 @@ services:
   discordlanguagegaming:
     container_name: discordlanguagegaming
     build: .
+    env_file: discordlanguagegaming.env
     restart: unless-stopped
 
     # use custom logger:

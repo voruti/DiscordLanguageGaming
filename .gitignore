@@ -192,3 +192,7 @@ gradle-app.setting
 **/build/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,intellij+all,gradle,java,git
+
+
+### Custom ###
+/discordlanguagegaming.env
