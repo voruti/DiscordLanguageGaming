@@ -1,4 +1,4 @@
-package voruti.discordlanguagegaming.listener;
+package voruti.discordlanguagegaming.game;
 
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageChannel;
