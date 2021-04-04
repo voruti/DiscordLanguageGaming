@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import voruti.discordlanguagegaming.utility.Constants;
 
 public class NoAuthor extends ListenerAdapter {
 
@@ -32,7 +33,7 @@ public class NoAuthor extends ListenerAdapter {
             channel.sendMessage(msg).queue();
 
             // respond with help text, if requested:
-            if (msg.getContentRaw().contains("!was")) {
+            if (msg.getContentRaw().contains(Constants.HELP_CMD)) {
                 channel.sendMessage("Man wei\u00DF halt einfach nicht, von wem die Nachricht kommt.").queue();
             }
         }
