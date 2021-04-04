@@ -19,7 +19,6 @@ public class Main {
 
         try {
             JDA jda = JDABuilder.createDefault(token)
-//                    .addEventListeners(new DiscordEventListener())
                     .addEventListeners(new DiscordListenerAdapter())
                     .build();
 
