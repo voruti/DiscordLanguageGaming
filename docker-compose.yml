@@ -2,10 +2,9 @@ version: "3"
 services:
 
   discordlanguagegaming:
-    container_name: discordlanguagegaming
     build: .
     env_file: discordlanguagegaming.env
-    restart: unless-stopped
+    restart: always
 
     # use custom logger:
     logging:
